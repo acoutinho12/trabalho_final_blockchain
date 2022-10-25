@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Eleicao DApp</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body class="container">
+    <h1>Votacao - Secao do Eleitor</h1>
+    <div id="myName"></div>
+    <div id="myStatus"></div>
+    <div id="ballotStatus"></div>
+    <div id="votacao">
+      <h3>Delegue seu voto para outro eleitor</h3>
+      <form id="formDelegate" onSubmit="return false;">
+        <input
+          type="text"
+          size="100"
+          name="delegateAddress"
+          id="delegateAddress"
+          placeholder="address"
+        />
+        <button
+          id="btnDelegate"
+          onClick="delegarVoto()"
+          class="btn btn-primary"
+        >
+          Delegar
+        </button>
+      </form>
+
+      <h3>Escolha um candidato/proposta e vote</h3>
+      <form id="vote-form">
+        <select id="candidate-options" name="candidate"></select>
+        <button type="button" class="btn btn-primary" id="btnVote">
+          Votar
+        </button>
+      </form>
+    </div>
+  </body>
+  <script
+    charset="utf-8"
+    src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+    type="text/javascript"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="./js/VotingAbi.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/user.js"></script>
+</html>

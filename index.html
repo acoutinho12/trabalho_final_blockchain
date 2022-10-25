@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Hello World DApp</title>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="container text-center">
+  <h1>Votacao - Trabalho Final de Blockchain</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Escolha uma opcao.</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3">
+      <button id="btnAdmin" disabled class="btn btn-primary" onclick="window.location.href='admin.html'">Admin</button>
+    </div>
+    <div class="col-md-3">
+      <button id="btnEleitor" class="btn btn-primary" onclick="window.location.href='user.html'">Eleitor</button>
+    </div>
+  </div>
+</body>
+<script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v4.min.js" type="text/javascript"> </script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="./js/VotingAbi.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/index.js"></script>
+</html>
